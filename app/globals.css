@@ -544,6 +544,149 @@ main {
   cursor: pointer;
 }
 
+.connectSection {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 92px 0 78px;
+}
+
+.connectIntro {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 440px);
+  align-items: end;
+  gap: 64px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.connectIntro .sectionIndex {
+  margin-bottom: 12px;
+}
+
+.connectIntro h2 {
+  margin: 0;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.connectIntro > p {
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.qrGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.qrCard {
+  --qr-accent: #5f88ad;
+  min-width: 0;
+  padding: 22px;
+  background: #fffefa;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--qr-accent);
+}
+
+.monkeyQrCard {
+  --qr-accent: #dd6d3d;
+}
+
+.cocreateQrCard {
+  --qr-accent: #78927c;
+}
+
+.qrCardHead {
+  min-height: 68px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.qrNumber {
+  padding-top: 4px;
+  color: var(--qr-accent);
+  font-family: Georgia, serif;
+  font-size: 13px;
+}
+
+.qrCard h3 {
+  margin: 0;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.qrCardHead p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.qrImageLink {
+  position: relative;
+  display: block;
+  margin-top: 17px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(31, 36, 31, 0.1);
+}
+
+.qrImageLink::after {
+  content: "点开原图";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 9px;
+  color: #fff;
+  background: rgba(31, 36, 31, 0.74);
+  border-radius: 2px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.qrImageLink:hover::after,
+.qrImageLink:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.qrImageLink img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1179 / 1324;
+  object-fit: contain;
+}
+
+.qrHint {
+  margin: 14px 0 0;
+  color: #7d7f78;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.expiryNote {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+}
+
 footer {
   width: min(1180px, calc(100% - 48px));
   min-height: 155px;
@@ -591,11 +734,22 @@ footer a {
   .projectGrid {
     grid-template-columns: 1fr;
   }
+
+  .connectIntro {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 18px;
+  }
+
+  .qrGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
   .topbar,
   .hero,
+  .connectSection,
   footer {
     width: calc(100% - 36px);
   }
@@ -672,6 +826,40 @@ footer a {
 
   .detailBlock {
     grid-template-columns: 42px 1fr;
+  }
+
+  .connectSection {
+    padding: 64px 0 54px;
+  }
+
+  .connectIntro {
+    padding-bottom: 24px;
+  }
+
+  .connectIntro h2 {
+    font-size: 30px;
+  }
+
+  .qrGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .qrCard {
+    padding: 19px;
+  }
+
+  .qrCardHead {
+    min-height: 0;
+  }
+
+  .qrImageLink {
+    margin-top: 20px;
+  }
+
+  .expiryNote {
+    line-height: 1.7;
+    text-align: left;
   }
 
   footer {

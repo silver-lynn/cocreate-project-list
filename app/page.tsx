@@ -355,6 +355,99 @@ export default function Home() {
         )}
       </section>
 
+      <section className="connectSection" aria-labelledby="connect-heading">
+        <div className="connectIntro">
+          <div>
+            <p className="sectionIndex">CONNECT &amp; COCREATE</p>
+            <h2 id="connect-heading">找到同路人</h2>
+          </div>
+          <p>
+            想聊项目、一起创作，或者只是想痛快吼两声，都可以从这里找到入口。
+          </p>
+        </div>
+
+        <div className="qrGrid">
+          <article className="qrCard">
+            <div className="qrCardHead">
+              <span className="qrNumber">01</span>
+              <div>
+                <h3>加我微信</h3>
+                <p>Leona · 项目交流与共创</p>
+              </div>
+            </div>
+            <a
+              className="qrImageLink"
+              href="/qrcode-wechat.jpg"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="查看加我微信二维码原图"
+            >
+              <img
+                src="/qrcode-wechat.jpg"
+                alt="Leona 的微信好友二维码"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p className="qrHint">微信扫码添加 · 手机端可点开后长按保存</p>
+          </article>
+
+          <article className="qrCard monkeyQrCard">
+            <div className="qrCardHead">
+              <span className="qrNumber">02</span>
+              <div>
+                <h3>猴击俱乐部吼叫群</h3>
+                <p>纯解压乱叫 · 无需组织语言</p>
+              </div>
+            </div>
+            <a
+              className="qrImageLink"
+              href="/qrcode-monkey-club.jpg"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="查看猴击俱乐部吼叫群二维码原图"
+            >
+              <img
+                src="/qrcode-monkey-club.jpg"
+                alt="猴击俱乐部吼叫群二维码"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p className="qrHint">群二维码有效期至 2026.08.13</p>
+          </article>
+
+          <article className="qrCard cocreateQrCard">
+            <div className="qrCardHead">
+              <span className="qrNumber">03</span>
+              <div>
+                <h3>加入共创群聊项目</h3>
+                <p>认识创作者 · 把想法一起做出来</p>
+              </div>
+            </div>
+            <a
+              className="qrImageLink"
+              href="/qrcode-cocreate.jpg"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="查看共创群聊项目二维码原图"
+            >
+              <img
+                src="/qrcode-cocreate.jpg"
+                alt="Leona 的创作者朋友群聊二维码"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p className="qrHint">群二维码有效期至 2026.08.13</p>
+          </article>
+        </div>
+
+        <p className="expiryNote">
+          群二维码失效后，请先添加 Leona 微信获取最新入口。
+        </p>
+      </section>
+
       <footer>
         <p>想法不是库存，是等待发生的行动。</p>
         <a href="#top">回到顶部 ↑</a>
