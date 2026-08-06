@@ -12,6 +12,9 @@ type Project = {
   context: string;
   next: string;
   accent: string;
+  publicUrl?: string;
+  publicLabel?: string;
+  publicKind?: "online" | "download";
 };
 
 const projects: Project[] = [
@@ -22,9 +25,12 @@ const projects: Project[] = [
     status: "推进中",
     category: "减压体验",
     direction: "面向高压成年人的 3–5 分钟移动端减压 Web 体验。",
-    context: "Web MVP、上线、猴子节日内容、产品改进；正在扩展投掷香蕉圣杯占卜。",
+    context: "移动端 Web MVP 已公开上线，包含怪叫、摆动、关怀与香蕉收集体验。",
     next: "完成占卜功能，并做一轮移动端体验验收。",
     accent: "#ef6a3a",
+    publicUrl: "https://silver-lynn.github.io/houji-club/",
+    publicLabel: "立即体验",
+    publicKind: "online",
   },
   {
     id: "fruit-shop",
@@ -53,20 +59,23 @@ const projects: Project[] = [
     status: "推进中",
     category: "文化体验",
     direction: "把山东酒局规则与人情世故做成在线体验。",
-    context: "目前集中在需求梳理和内容边界确认。",
-    next: "确定用户身份、学习路径及核心交互形式。",
+    context: "完整互动版本已经完成，但当前访客访问仍需授权。",
+    next: "开放访客访问权限，并完成一轮公开体验验收。",
     accent: "#c14e4e",
   },
   {
     id: "glass-art",
     name: "吹玻璃",
     alias: "数字艺术体验",
-    status: "待推进",
+    status: "推进中",
     category: "数字艺术",
     direction: "模拟玻璃制作过程的数字互动艺术体验。",
-    context: "已进入参考案例调研与技术路线设计阶段。",
-    next: "选定主要交互方式，制作单一吹制动作原型。",
+    context: "“玻璃大师：热坊原型”已上线，可体验吹气、塑形、回炉、评分与估价。",
+    next: "根据公开原型反馈调整手感，并补充移动端适配。",
     accent: "#4c9ca5",
+    publicUrl: "https://silver-lynn.github.io/glassmaster-prototype/",
+    publicLabel: "立即体验",
+    publicKind: "online",
   },
   {
     id: "try-it-on",
@@ -113,12 +122,15 @@ const projects: Project[] = [
     id: "mindful-scrolling",
     name: "Mindful Scrolling",
     alias: "正念刷视频",
-    status: "待推进",
+    status: "推进中",
     category: "注意力工具",
     direction: "面向 ADHD 与健忘场景的轻量注意力管理工具。",
-    context: "包含任务提醒、随机进度询问、任务分类、每日复盘与 iOS 悬浮计时横幅。",
-    next: "确定首发平台，验证提醒是否真正减少无意识刷视频。",
+    context: "Windows v0.8 公开测试版已发布，可下载使用悬浮计时器与本地笔记库。",
+    next: "收集公测反馈，验证明确浏览目的是否能减少无意识滚动。",
     accent: "#63924c",
+    publicUrl: "https://github.com/silver-lynn/mindful-scrolling/releases/latest",
+    publicLabel: "下载 Windows 公测版",
+    publicKind: "download",
   },
   {
     id: "imperial-exam",
@@ -135,12 +147,15 @@ const projects: Project[] = [
     id: "feather-letter",
     name: "羽毛信",
     alias: "Feather Letter",
-    status: "待推进",
+    status: "推进中",
     category: "候鸟数据",
     direction: "基于候鸟迁徙数据的数字人文与艺术网站。",
-    context: "已完成可靠数据源调研、线上版本分析和视觉优化建议。",
-    next: "统一数据来源说明，完成首页与核心地图的视觉升级。",
+    context: "候鸟迁徙月历原型已上线，包含 20 种候鸟与 240 个“物种 × 月份”数据切片。",
+    next: "继续完善逐物种数据溯源与不确定性说明，升级核心地图视觉。",
     accent: "#548ba3",
+    publicUrl: "https://silver-lynn.github.io/feather-letter/",
+    publicLabel: "立即体验",
+    publicKind: "online",
   },
 ];
 
@@ -286,7 +301,8 @@ export default function Home() {
         </div>
 
         <div className="resultLine" aria-live="polite">
-          显示 {visibleProjects.length} 个项目
+          <span>显示 {visibleProjects.length} 个项目</span>
+          <strong>4 个公开入口已验证 · 3 个在线体验 · 1 个 Windows 公测版</strong>
         </div>
 
         {visibleProjects.length > 0 ? (
@@ -339,6 +355,17 @@ export default function Home() {
                       <p>{project.next}</p>
                     </div>
                   </div>
+                  {project.publicUrl && (
+                    <a
+                      className={`projectLink ${project.publicKind === "download" ? "download" : ""}`}
+                      href={project.publicUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>{project.publicKind === "download" ? "公开测试" : "已上线"}</span>
+                      {project.publicLabel} ↗
+                    </a>
+                  )}
                 </article>
               );
             })}
