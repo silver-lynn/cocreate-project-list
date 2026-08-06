@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Leona 的 12 个创意、游戏、数字人文与互动体验项目，含已上线原型和公开测试入口。">
+  <meta name="description" content="Leona 的 15 个网页、游戏与硬件项目，含已上线原型和公开测试入口。">
   <title>共创项目簿｜Leona 的当前项目</title>
   <style>
     :root { color-scheme: light dark; }
@@ -26,12 +26,12 @@
 <div id="project-hub-inline">
   <header class="project-hub-hero">
     <div>
-      <p class="project-hub-kicker">CURRENT PROJECTS · 12</p>
+      <p class="project-hub-kicker">CURRENT PROJECTS · 15</p>
       <h1>共创项目簿</h1>
       <p class="project-hub-subtitle">把散落的想法，变成正在发生的项目。</p>
     </div>
     <div class="project-hub-count" aria-label="项目数量">
-      <strong>12</strong>
+      <strong>15</strong>
       <span>个项目在案</span>
     </div>
   </header>
@@ -50,17 +50,98 @@
   </div>
 
   <div class="project-hub-result-row">
-    <p class="project-hub-result text-small text-muted" aria-live="polite">显示 12 个项目</p>
-    <p class="project-hub-live-summary text-small"><strong>4</strong> 个公开入口已验证 · 3 个在线体验 · 1 个 Windows 公测版</p>
+    <p class="project-hub-result text-small text-muted" aria-live="polite">显示 15 个项目</p>
+    <p class="project-hub-live-summary text-small"><strong>7</strong> 个公开入口已验证 · 6 个在线体验 · 1 个 Windows 公测版</p>
   </div>
 
-  <section class="project-hub-list" aria-label="项目总览">
+  <nav class="project-hub-section-nav" aria-label="项目分区导航">
+    <a href="#web-projects"><strong>07</strong><span>网页</span><small>网站、数字人文与工具</small></a>
+    <a href="#game-projects"><strong>07</strong><span>游戏</span><small>可玩原型与互动体验</small></a>
+    <a href="#hardware-projects"><strong>01</strong><span>硬件</span><small>空间装置与实体交互</small></a>
+  </nav>
+
+  <section class="project-hub-category" id="web-projects" data-category-section>
+    <header class="project-hub-category-head">
+      <div><span>01</span><h2>网页</h2></div>
+      <p>网站、数字人文、内容实验与个人数字工具</p>
+    </header>
+    <div class="project-hub-list" aria-label="网页类项目">
+    <article class="project-hub-item" data-status="推进中" data-search="假如诗人有网瘾 网络热梗重写古诗 内容实验 网页">
+      <div class="project-hub-item-head"><span>01 · 内容实验</span><span class="viz-badge">推进中</span></div>
+      <h3>假如诗人有网瘾</h3>
+      <p>用网络热梗改写古诗，形成可传播的内容或互动产品。</p>
+      <div class="project-hub-next"><span>下一步</span><p>确定内容模板，产出一组完整样例测试传播效果。</p></div>
+    </article>
+    <article class="project-hub-item" data-status="待推进" data-search="情书野史 名人恋爱史 情书 数字人文 网页">
+      <div class="project-hub-item-head"><span>02 · 数字人文</span><span class="viz-badge">待推进</span></div>
+      <h3>情书野史</h3>
+      <p>以名人恋爱史、情书资料与人物关系网络为核心的网站。</p>
+      <div class="project-hub-next"><span>下一步</span><p>选 3–5 位人物做内容样板，并明确史料引用标准。</p></div>
+    </article>
+    <article class="project-hub-item" data-status="待推进" data-search="四方求索 古代旅行家 路线叙事 网页">
+      <div class="project-hub-item-head"><span>03 · 路线叙事</span><span class="viz-badge">待推进</span></div>
+      <h3>四方求索</h3>
+      <p>按方向分类展示中国古代旅行家及其路线的探索网站。</p>
+      <div class="project-hub-next"><span>下一步</span><p>选一位旅行家完成“人物—路线—事件”样板页。</p></div>
+    </article>
+    <article class="project-hub-item" data-status="推进中" data-search="Mindful Scrolling 正念刷视频 ADHD 注意力 Windows 公测 下载 网页 工具">
+      <div class="project-hub-item-head"><span>04 · 注意力工具</span><span class="viz-badge">推进中</span></div>
+      <h3>Mindful Scrolling / 正念刷视频</h3>
+      <p>Windows v0.8 公开测试版已发布，可下载使用悬浮计时器与本地笔记库。</p>
+      <div class="project-hub-next"><span>下一步</span><p>收集公测反馈，验证明确浏览目的是否能减少无意识滚动。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link project-hub-link-download" href="https://github.com/silver-lynn/mindful-scrolling/releases/latest" target="_blank" rel="noopener noreferrer"><span>公开测试</span>下载 Windows 版 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/mindful-scrolling" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </article>
+    <article class="project-hub-item" data-status="推进中" data-search="羽毛信 Feather Letter 候鸟迁徙 数据 月历 地图 已上线 在线体验 网页">
+      <div class="project-hub-item-head"><span>05 · 候鸟数据</span><span class="viz-badge">推进中</span></div>
+      <h3>羽毛信 Feather Letter</h3>
+      <p>候鸟迁徙月历原型已上线，包含 20 种候鸟与 240 个“物种 × 月份”数据切片。</p>
+      <div class="project-hub-next"><span>下一步</span><p>继续完善逐物种数据溯源与不确定性说明，升级核心地图视觉。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/feather-letter/" target="_blank" rel="noopener noreferrer"><span>原型上线</span>立即体验 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/feather-letter" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </article>
+    <article class="project-hub-item" data-status="推进中" data-search="呼啸山庄 人物移动 地图 研究图集 数字人文 Wuthering Heights 网页 已上线">
+      <div class="project-hub-item-head"><span>06 · 文学地图</span><span class="viz-badge">推进中</span></div>
+      <h3>《呼啸山庄》人物移动地图</h3>
+      <p>把人物的漫游、探访与逃亡转化为双语动态故事地图和研究图集。</p>
+      <div class="project-hub-next"><span>目前</span><p>互动地图、分幕时间轴、人物移动光点与研究图集均已公开上线。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/wuthering-heights-mobility-map/" target="_blank" rel="noopener noreferrer"><span>已上线</span>打开地图 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/wuthering-heights-mobility-map" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </article>
+    <article class="project-hub-item" data-status="推进中" data-search="今日一号令 毛泽东选集 个人日程 工作记录 复盘 网页 工具 已上线">
+      <div class="project-hub-item-head"><span>07 · 行动工具</span><span class="viz-badge">推进中</span></div>
+      <h3>今日一号令</h3>
+      <p>把“调查、判断、部署、落实、复盘”变成轻量个人工作记录系统。</p>
+      <div class="project-hub-next"><span>目前</span><p>每日记录、每周复盘、工程管理和数据导入导出已公开可用。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/today-first-order/" target="_blank" rel="noopener noreferrer"><span>已上线</span>立即使用 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/today-first-order" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </article>
+    </div>
+  </section>
+
+  <section class="project-hub-category" id="game-projects" data-category-section>
+    <header class="project-hub-category-head">
+      <div><span>02</span><h2>游戏</h2></div>
+      <p>可玩原型、互动叙事与轻量体验</p>
+    </header>
+    <div class="project-hub-list" aria-label="游戏类项目">
     <article class="project-hub-item" data-status="推进中" data-search="猴子时间 猴击俱乐部 减压体验 投掷香蕉圣杯占卜">
       <div class="project-hub-item-head"><span>01 · 减压体验</span><span class="viz-badge">推进中</span></div>
       <h3>猴子时间 / 猴击俱乐部</h3>
       <p>移动端 Web MVP 已公开上线，包含怪叫、摆动、关怀与香蕉收集体验。</p>
       <div class="project-hub-next"><span>下一步</span><p>完成占卜功能，并做一轮移动端体验验收。</p></div>
-      <a class="project-hub-link" href="https://silver-lynn.github.io/houji-club/" target="_blank" rel="noopener noreferrer"><span>已上线</span>立即体验 ↗</a>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/houji-club/" target="_blank" rel="noopener noreferrer"><span>已上线</span>立即体验 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/houji-club" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
     </article>
     <article class="project-hub-item" data-status="推进中" data-search="复古水果店合成游戏 休闲游戏 海报风">
       <div class="project-hub-item-head"><span>02 · 休闲游戏</span><span class="viz-badge">推进中</span></div>
@@ -68,69 +149,61 @@
       <p>清新复古海报风的水果店合成游戏。</p>
       <div class="project-hub-next"><span>下一步</span><p>确定核心合成循环，制作首个可玩原型。</p></div>
     </article>
-    <article class="project-hub-item" data-status="推进中" data-search="假如诗人有网瘾 网络热梗重写古诗 内容实验">
-      <div class="project-hub-item-head"><span>03 · 内容实验</span><span class="viz-badge">推进中</span></div>
-      <h3>假如诗人有网瘾</h3>
-      <p>用网络热梗改写古诗，形成可传播的内容或互动产品。</p>
-      <div class="project-hub-next"><span>下一步</span><p>确定内容模板，产出一组完整样例测试传播效果。</p></div>
-    </article>
     <article class="project-hub-item" data-status="推进中" data-search="山东饭局人情世故培训 酒局 文化体验">
-      <div class="project-hub-item-head"><span>04 · 文化体验</span><span class="viz-badge">推进中</span></div>
-      <h3>山东饭局人情世故培训</h3>
-      <p>把山东酒局规则与人情世故做成在线体验。</p>
+      <div class="project-hub-item-head"><span>03 · 文化体验</span><span class="viz-badge">推进中</span></div>
+      <h3>小猫来吃席 / 山东饭局礼数</h3>
+      <p>通过小动物宴席练习座次、鱼头方向、倒茶分寸、敬酒致辞与动作节奏。</p>
       <div class="project-hub-next"><span>下一步</span><p>开放访客访问权限，并完成一轮公开体验验收。</p></div>
+      <div class="project-hub-actions"><a class="project-hub-repo" href="https://github.com/silver-lynn/xiaomao-laichixi" target="_blank" rel="noopener noreferrer">查看 GitHub ↗</a></div>
     </article>
     <article class="project-hub-item" data-status="推进中" data-search="吹玻璃 玻璃大师 热坊原型 数字艺术体验 已上线 在线体验">
-      <div class="project-hub-item-head"><span>05 · 数字艺术</span><span class="viz-badge">推进中</span></div>
+      <div class="project-hub-item-head"><span>04 · 数字艺术</span><span class="viz-badge">推进中</span></div>
       <h3>吹玻璃：数字艺术体验</h3>
       <p>“玻璃大师：热坊原型”已上线，可体验吹气、塑形、回炉、评分与估价。</p>
       <div class="project-hub-next"><span>下一步</span><p>根据公开原型反馈调整手感，并补充移动端适配。</p></div>
-      <a class="project-hub-link" href="https://silver-lynn.github.io/glassmaster-prototype/" target="_blank" rel="noopener noreferrer"><span>原型上线</span>立即体验 ↗</a>
-    </article>
-    <article class="project-hub-item" data-status="待推进" data-search="Try It On 投影虚拟试衣 动作捕捉 Cos">
-      <div class="project-hub-item-head"><span>06 · 空间交互</span><span class="viz-badge">待推进</span></div>
-      <h3>Try It On：投影虚拟试衣</h3>
-      <p>结合数字模特、动作捕捉、服装投影与二次元 Cos。</p>
-      <div class="project-hub-next"><span>下一步</span><p>缩小 MVP 范围，优先验证动作捕捉与服装跟随。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/glassmaster-prototype/" target="_blank" rel="noopener noreferrer"><span>原型上线</span>立即体验 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/glassmaster-prototype" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
     </article>
     <article class="project-hub-item" data-status="待推进" data-search="大女人武器换装游戏 4399 枪炮">
-      <div class="project-hub-item-head"><span>07 · 换装游戏</span><span class="viz-badge">待推进</span></div>
+      <div class="project-hub-item-head"><span>05 · 换装游戏</span><span class="viz-badge">待推进</span></div>
       <h3>大女人武器换装游戏</h3>
       <p>4399 风格女性换装游戏，结合枪炮武器和“大女人”主题。</p>
       <div class="project-hub-next"><span>下一步</span><p>确定换装部位、武器系统和首批角色素材清单。</p></div>
     </article>
-    <article class="project-hub-item" data-status="待推进" data-search="情书野史 名人恋爱史 数字人文">
-      <div class="project-hub-item-head"><span>08 · 数字人文</span><span class="viz-badge">待推进</span></div>
-      <h3>情书野史</h3>
-      <p>以名人恋爱史、情书资料与人物关系网络为核心的网站。</p>
-      <div class="project-hub-next"><span>下一步</span><p>选 3–5 位人物做内容样板，并明确史料引用标准。</p></div>
-    </article>
-    <article class="project-hub-item" data-status="待推进" data-search="四方求索 古代旅行家 路线叙事">
-      <div class="project-hub-item-head"><span>09 · 路线叙事</span><span class="viz-badge">待推进</span></div>
-      <h3>四方求索</h3>
-      <p>按方向分类展示中国古代旅行家及其路线的探索网站。</p>
-      <div class="project-hub-next"><span>下一步</span><p>选一位旅行家完成“人物—路线—事件”样板页。</p></div>
-    </article>
-    <article class="project-hub-item" data-status="推进中" data-search="Mindful Scrolling 正念刷视频 ADHD 注意力 Windows 公测 下载">
-      <div class="project-hub-item-head"><span>10 · 注意力工具</span><span class="viz-badge">推进中</span></div>
-      <h3>Mindful Scrolling / 正念刷视频</h3>
-      <p>Windows v0.8 公开测试版已发布，可下载使用悬浮计时器与本地笔记库。</p>
-      <div class="project-hub-next"><span>下一步</span><p>收集公测反馈，验证明确浏览目的是否能减少无意识滚动。</p></div>
-      <a class="project-hub-link project-hub-link-download" href="https://github.com/silver-lynn/mindful-scrolling/releases/latest" target="_blank" rel="noopener noreferrer"><span>公开测试</span>下载 Windows 版 ↗</a>
-    </article>
     <article class="project-hub-item" data-status="待推进" data-search="考科举 模拟冒险 剧情游戏">
-      <div class="project-hub-item-head"><span>11 · 剧情游戏</span><span class="viz-badge">待推进</span></div>
+      <div class="project-hub-item-head"><span>06 · 剧情游戏</span><span class="viz-badge">待推进</span></div>
       <h3>考科举：模拟冒险</h3>
       <p>橙光式科举剧情游戏，包含困难机制和分支选择。</p>
       <div class="project-hub-next"><span>下一步</span><p>完成一条从报名到首场考试的可玩剧情线。</p></div>
     </article>
-    <article class="project-hub-item" data-status="推进中" data-search="羽毛信 Feather Letter 候鸟迁徙 数据 月历 地图 已上线 在线体验">
-      <div class="project-hub-item-head"><span>12 · 候鸟数据</span><span class="viz-badge">推进中</span></div>
-      <h3>羽毛信 Feather Letter</h3>
-      <p>候鸟迁徙月历原型已上线，包含 20 种候鸟与 240 个“物种 × 月份”数据切片。</p>
-      <div class="project-hub-next"><span>下一步</span><p>继续完善逐物种数据溯源与不确定性说明，升级核心地图视觉。</p></div>
-      <a class="project-hub-link" href="https://silver-lynn.github.io/feather-letter/" target="_blank" rel="noopener noreferrer"><span>原型上线</span>立即体验 ↗</a>
+    <article class="project-hub-item" data-status="推进中" data-search="KAREN 银河系争气委员会 MBTI 人格测试 冲突场景 游戏 已上线">
+      <div class="project-hub-item-head"><span>07 · 人格测试</span><span class="viz-badge">推进中</span></div>
+      <h3>KAREN｜银河系争气委员会</h3>
+      <p>选择 MBTI 并完成 5 道冲突场景题，生成窝囊值、特派员阵容与分享战报。</p>
+      <div class="project-hub-next"><span>下一步</span><p>接入登录与云端保存，并继续优化移动端分享体验。</p></div>
+      <div class="project-hub-actions">
+        <a class="project-hub-link" href="https://silver-lynn.github.io/call-karen/" target="_blank" rel="noopener noreferrer"><span>已上线</span>立即测试 ↗</a>
+        <a class="project-hub-repo" href="https://github.com/silver-lynn/call-karen" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
     </article>
+    </div>
+  </section>
+
+  <section class="project-hub-category" id="hardware-projects" data-category-section>
+    <header class="project-hub-category-head">
+      <div><span>03</span><h2>硬件</h2></div>
+      <p>空间装置、投影体验与实体交互</p>
+    </header>
+    <div class="project-hub-list project-hub-list-single" aria-label="硬件类项目">
+    <article class="project-hub-item" data-status="待推进" data-search="Try It On 投影虚拟试衣 动作捕捉 Cos 硬件 空间交互">
+      <div class="project-hub-item-head"><span>01 · 空间交互</span><span class="viz-badge">待推进</span></div>
+      <h3>Try It On：投影虚拟试衣</h3>
+      <p>结合数字模特、动作捕捉、服装投影、场景换装与二次元 Cos。</p>
+      <div class="project-hub-next"><span>下一步</span><p>缩小 MVP 范围，优先验证动作捕捉、投影校准与服装跟随。</p></div>
+    </article>
+    </div>
   </section>
 
   <section class="project-hub-connect" aria-labelledby="project-hub-connect-heading">
@@ -204,7 +277,20 @@
   #project-hub-inline .project-hub-result { text-align: right; }
   #project-hub-inline .project-hub-live-summary { color: light-dark(#3f6849, #b8d9bd); text-align: right; }
   #project-hub-inline .project-hub-live-summary strong { font-size: 18px; }
+  #project-hub-inline .project-hub-section-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0 44px; }
+  #project-hub-inline .project-hub-section-nav a { min-height: 92px; padding: 15px 16px; display: grid; grid-template-columns: auto 1fr; align-content: center; gap: 2px 12px; color: light-dark(#273128, #e6ece6); background: light-dark(#e7e8df, #252f27); border: 1px solid light-dark(#d0d1c8, #3b463d); border-radius: 11px; text-decoration: none; }
+  #project-hub-inline .project-hub-section-nav a:hover { border-color: light-dark(#78927c, #91aa95); transform: translateY(-1px); }
+  #project-hub-inline .project-hub-section-nav strong { grid-row: 1 / 3; align-self: center; color: light-dark(#607864, #a7c0aa); font-family: Georgia, serif; font-size: 24px; }
+  #project-hub-inline .project-hub-section-nav span { align-self: end; font-size: 18px; font-weight: 700; }
+  #project-hub-inline .project-hub-section-nav small { color: light-dark(#686b63, #b8c0b7); }
+  #project-hub-inline .project-hub-category { margin-top: 44px; scroll-margin-top: 18px; }
+  #project-hub-inline .project-hub-category-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-bottom: 13px; border-bottom: 1px solid light-dark(#c9c7be, #3a443b); }
+  #project-hub-inline .project-hub-category-head > div { display: flex; align-items: baseline; gap: 12px; }
+  #project-hub-inline .project-hub-category-head span { color: light-dark(#607864, #a7c0aa); font-family: Georgia, serif; }
+  #project-hub-inline .project-hub-category-head h2 { margin: 0; font-size: 28px; }
+  #project-hub-inline .project-hub-category-head p { margin: 0; color: light-dark(#686b63, #b8c0b7); }
   #project-hub-inline .project-hub-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  #project-hub-inline .project-hub-list-single { grid-template-columns: minmax(0, 1fr); max-width: calc(50% - 7px); }
   #project-hub-inline .project-hub-item {
     padding: 18px 0;
     border-top: 2px solid light-dark(#78927c, #91aa95);
@@ -216,10 +302,12 @@
   #project-hub-inline .project-hub-next { display: grid; grid-template-columns: 58px 1fr; gap: 8px; }
   #project-hub-inline .project-hub-next span { color: light-dark(#607864, #a7c0aa); }
   #project-hub-inline .project-hub-next p { margin: 0; }
-  #project-hub-inline .project-hub-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 9px 12px; color: light-dark(#fff, #18231b); background: light-dark(#315d3c, #a9d7b0); border-radius: 8px; font-weight: 700; text-decoration: none; }
+  #project-hub-inline .project-hub-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  #project-hub-inline .project-hub-link { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; color: light-dark(#fff, #18231b); background: light-dark(#315d3c, #a9d7b0); border-radius: 8px; font-weight: 700; text-decoration: none; }
   #project-hub-inline .project-hub-link:hover { transform: translateY(-1px); filter: brightness(1.06); }
   #project-hub-inline .project-hub-link span { padding: 2px 7px; color: inherit; background: light-dark(rgba(255,255,255,.16), rgba(24,35,27,.12)); border-radius: 999px; font-size: 11px; }
   #project-hub-inline .project-hub-link-download { background: light-dark(#4c527d, #c4c9f0); }
+  #project-hub-inline .project-hub-repo { color: light-dark(#526454, #c4d6c6); font-size: 12px; font-weight: 700; text-underline-offset: 3px; }
   #project-hub-inline .project-hub-connect { margin-top: 46px; padding-top: 28px; border-top: 1px solid light-dark(#c9c7be, #3a443b); }
   #project-hub-inline .project-hub-connect-head { max-width: 620px; }
   #project-hub-inline .project-hub-qr-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 20px 0 14px; }
@@ -229,10 +317,14 @@
   @media (max-width: 680px) {
     #project-hub-inline { padding: 18px; }
     #project-hub-inline .project-hub-hero,
-    #project-hub-inline .project-hub-controls { align-items: stretch; flex-direction: column; }
+    #project-hub-inline .project-hub-controls,
+    #project-hub-inline .project-hub-category-head { align-items: stretch; flex-direction: column; }
     #project-hub-inline .project-hub-search { max-width: none; }
     #project-hub-inline .project-hub-list,
     #project-hub-inline .project-hub-qr-grid { grid-template-columns: 1fr; }
+    #project-hub-inline .project-hub-list-single { max-width: none; }
+    #project-hub-inline .project-hub-section-nav { grid-template-columns: 1fr; margin-bottom: 34px; }
+    #project-hub-inline .project-hub-section-nav a { min-height: 76px; }
     #project-hub-inline .project-hub-result-row { align-items: flex-start; flex-direction: column; gap: 2px; }
     #project-hub-inline .project-hub-result,
     #project-hub-inline .project-hub-live-summary { text-align: left; }
@@ -245,6 +337,7 @@
     const search = root.querySelector("input[type='search']");
     const filters = Array.from(root.querySelectorAll("[data-filter]"));
     const items = Array.from(root.querySelectorAll(".project-hub-item"));
+    const sections = Array.from(root.querySelectorAll("[data-category-section]"));
     const result = root.querySelector(".project-hub-result");
     let activeFilter = "全部";
 
@@ -256,6 +349,9 @@
         const matchesSearch = !keyword || item.dataset.search.toLowerCase().includes(keyword) || item.textContent.toLowerCase().includes(keyword);
         item.hidden = !(matchesFilter && matchesSearch);
         if (!item.hidden) visible += 1;
+      });
+      sections.forEach((section) => {
+        section.hidden = !Array.from(section.querySelectorAll(".project-hub-item")).some((item) => !item.hidden);
       });
       result.textContent = `显示 ${visible} 个项目`;
     };

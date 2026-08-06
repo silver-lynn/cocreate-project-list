@@ -7,6 +7,7 @@ type Project = {
   name: string;
   alias?: string;
   status: "推进中" | "待推进";
+  group: "网页" | "游戏" | "硬件";
   category: string;
   direction: string;
   context: string;
@@ -15,6 +16,7 @@ type Project = {
   publicUrl?: string;
   publicLabel?: string;
   publicKind?: "online" | "download";
+  repoUrl?: string;
 };
 
 const projects: Project[] = [
@@ -23,6 +25,7 @@ const projects: Project[] = [
     name: "猴子时间",
     alias: "猴击俱乐部",
     status: "推进中",
+    group: "游戏",
     category: "减压体验",
     direction: "面向高压成年人的 3–5 分钟移动端减压 Web 体验。",
     context: "移动端 Web MVP 已公开上线，包含怪叫、摆动、关怀与香蕉收集体验。",
@@ -31,11 +34,13 @@ const projects: Project[] = [
     publicUrl: "https://silver-lynn.github.io/houji-club/",
     publicLabel: "立即体验",
     publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/houji-club",
   },
   {
     id: "fruit-shop",
     name: "复古水果店合成游戏",
     status: "推进中",
+    group: "游戏",
     category: "休闲游戏",
     direction: "清新复古海报风的水果店合成游戏。",
     context: "正在规划技术路线、项目结构与完整视觉语言。",
@@ -47,6 +52,7 @@ const projects: Project[] = [
     name: "假如诗人有网瘾",
     alias: "网络热梗重写古诗",
     status: "推进中",
+    group: "网页",
     category: "内容实验",
     direction: "用网络热梗改写古诗，形成可传播的内容或互动产品。",
     context: "正在构思稳定的表达形式，并创作第一批示例内容。",
@@ -55,19 +61,23 @@ const projects: Project[] = [
   },
   {
     id: "shandong-dinner",
-    name: "山东饭局人情世故培训",
+    name: "小猫来吃席",
+    alias: "山东饭局礼数互动体验",
     status: "推进中",
+    group: "游戏",
     category: "文化体验",
-    direction: "把山东酒局规则与人情世故做成在线体验。",
+    direction: "通过小动物宴席练习座次、鱼头方向、倒茶分寸、敬酒致辞与动作节奏。",
     context: "完整互动版本已经完成，但当前访客访问仍需授权。",
     next: "开放访客访问权限，并完成一轮公开体验验收。",
     accent: "#c14e4e",
+    repoUrl: "https://github.com/silver-lynn/xiaomao-laichixi",
   },
   {
     id: "glass-art",
     name: "吹玻璃",
     alias: "数字艺术体验",
     status: "推进中",
+    group: "游戏",
     category: "数字艺术",
     direction: "模拟玻璃制作过程的数字互动艺术体验。",
     context: "“玻璃大师：热坊原型”已上线，可体验吹气、塑形、回炉、评分与估价。",
@@ -76,22 +86,25 @@ const projects: Project[] = [
     publicUrl: "https://silver-lynn.github.io/glassmaster-prototype/",
     publicLabel: "立即体验",
     publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/glassmaster-prototype",
   },
   {
     id: "try-it-on",
     name: "Try It On",
     alias: "投影虚拟试衣",
     status: "待推进",
+    group: "硬件",
     category: "空间交互",
     direction: "结合数字模特、动作捕捉、服装投影、场景换装与二次元 Cos。",
     context: "整体技术方案已经完成第一轮梳理。",
-    next: "缩小 MVP 范围，优先验证动作捕捉与服装跟随。",
+    next: "缩小 MVP 范围，优先验证动作捕捉、投影校准与服装跟随。",
     accent: "#5682b9",
   },
   {
     id: "strong-woman",
     name: "大女人武器换装游戏",
     status: "待推进",
+    group: "游戏",
     category: "换装游戏",
     direction: "4399 风格女性换装游戏，结合枪炮武器和“大女人”主题。",
     context: "已完成玩法方向和主题气质的初步策划。",
@@ -102,6 +115,7 @@ const projects: Project[] = [
     id: "love-letters",
     name: "情书野史",
     status: "待推进",
+    group: "网页",
     category: "数字人文",
     direction: "以名人恋爱史、情书资料与人物关系网络为核心的网站。",
     context: "正在规划内容范围、人物关系和资料结构。",
@@ -112,6 +126,7 @@ const projects: Project[] = [
     id: "four-directions",
     name: "四方求索",
     status: "待推进",
+    group: "网页",
     category: "路线叙事",
     direction: "按方向分类展示中国古代旅行家及其路线的探索网站。",
     context: "已形成初步内容架构与路线交互构想。",
@@ -123,6 +138,7 @@ const projects: Project[] = [
     name: "Mindful Scrolling",
     alias: "正念刷视频",
     status: "推进中",
+    group: "网页",
     category: "注意力工具",
     direction: "面向 ADHD 与健忘场景的轻量注意力管理工具。",
     context: "Windows v0.8 公开测试版已发布，可下载使用悬浮计时器与本地笔记库。",
@@ -131,12 +147,14 @@ const projects: Project[] = [
     publicUrl: "https://github.com/silver-lynn/mindful-scrolling/releases/latest",
     publicLabel: "下载 Windows 公测版",
     publicKind: "download",
+    repoUrl: "https://github.com/silver-lynn/mindful-scrolling",
   },
   {
     id: "imperial-exam",
     name: "考科举",
     alias: "模拟冒险",
     status: "待推进",
+    group: "游戏",
     category: "剧情游戏",
     direction: "橙光式科举剧情游戏，包含科举体验、困难机制和分支选择。",
     context: "正在梳理故事设定、科举流程与玩法细节。",
@@ -148,6 +166,7 @@ const projects: Project[] = [
     name: "羽毛信",
     alias: "Feather Letter",
     status: "推进中",
+    group: "网页",
     category: "候鸟数据",
     direction: "基于候鸟迁徙数据的数字人文与艺术网站。",
     context: "候鸟迁徙月历原型已上线，包含 20 种候鸟与 240 个“物种 × 月份”数据切片。",
@@ -156,7 +175,61 @@ const projects: Project[] = [
     publicUrl: "https://silver-lynn.github.io/feather-letter/",
     publicLabel: "立即体验",
     publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/feather-letter",
   },
+  {
+    id: "wuthering-heights-map",
+    name: "《呼啸山庄》人物移动地图",
+    alias: "Wuthering Heights Mobility Map",
+    status: "推进中",
+    group: "网页",
+    category: "文学地图",
+    direction: "把人物的漫游、探访与逃亡转化为双语动态故事地图和研究图集。",
+    context: "互动地图、分幕时间轴、人物移动光点与研究图集均已公开上线。",
+    next: "继续校订文本事件与距离估算，并扩展可复用的研究图表。",
+    accent: "#73624f",
+    publicUrl: "https://silver-lynn.github.io/wuthering-heights-mobility-map/",
+    publicLabel: "打开互动地图",
+    publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/wuthering-heights-mobility-map",
+  },
+  {
+    id: "call-karen",
+    name: "KAREN",
+    alias: "银河系争气委员会",
+    status: "推进中",
+    group: "游戏",
+    category: "人格测试",
+    direction: "选择 MBTI 并完成 5 道冲突场景题，生成窝囊值、特派员阵容与分享战报。",
+    context: "移动端人格测试 V1 已公开上线，游客战报保存在本地浏览器。",
+    next: "接入登录与云端保存，并继续优化移动端分享体验。",
+    accent: "#6f5db8",
+    publicUrl: "https://silver-lynn.github.io/call-karen/",
+    publicLabel: "立即测试",
+    publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/call-karen",
+  },
+  {
+    id: "today-first-order",
+    name: "今日一号令",
+    status: "推进中",
+    group: "网页",
+    category: "行动工具",
+    direction: "把调查、判断、部署、落实与复盘变成轻量个人工作记录系统。",
+    context: "每日记录、每周复盘、工程管理和数据导入导出已公开可用。",
+    next: "继续收集长期使用反馈，优化移动端填写和阶段复盘体验。",
+    accent: "#8b5035",
+    publicUrl: "https://silver-lynn.github.io/today-first-order/",
+    publicLabel: "立即使用",
+    publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/today-first-order",
+  },
+];
+
+const projectGroups = [
+  { id: "web", name: "网页" as const, description: "网站、数字人文、内容实验与个人数字工具" },
+  { id: "games", name: "游戏" as const, description: "可玩原型、互动叙事与轻量体验" },
+  { id: "hardware", name: "硬件" as const, description: "空间装置、投影体验与实体交互" },
 ];
 
 type Filter = "全部" | Project["status"];
@@ -222,15 +295,15 @@ export default function Home() {
           <span className="brandMark">共</span>
           <span>共创项目簿</span>
         </a>
-        <div className="dateStamp">更新于 2026.08.06</div>
+        <div className="dateStamp">更新于 2026.08.07</div>
       </header>
 
       <section className="hero" id="top">
         <div className="heroCopy">
-          <p className="eyebrow">CURRENT PROJECTS · 12</p>
+          <p className="eyebrow">CURRENT PROJECTS · {projects.length}</p>
           <h1>把散落的想法，<br />变成正在发生的项目。</h1>
           <p className="intro">
-            一页看清创意、游戏、数字人文与体验工具。每个项目只保留三个关键信息：它要做什么、目前在哪里、下一步往哪走。
+            按网页、游戏与硬件整理正在发生的创作。每个项目保留方向、进度、下一步与可访问入口。
           </p>
         </div>
 
@@ -300,73 +373,104 @@ export default function Home() {
           </div>
         </div>
 
+        <nav className="groupNav" aria-label="项目分区导航">
+          {projectGroups.map((group) => (
+            <a href={`#${group.id}`} key={group.id}>
+              <strong>{String(projects.filter((project) => project.group === group.name).length).padStart(2, "0")}</strong>
+              <span>{group.name}</span>
+              <small>{group.description}</small>
+            </a>
+          ))}
+        </nav>
+
         <div className="resultLine" aria-live="polite">
           <span>显示 {visibleProjects.length} 个项目</span>
-          <strong>4 个公开入口已验证 · 3 个在线体验 · 1 个 Windows 公测版</strong>
+          <strong>7 个公开入口已验证 · 6 个在线体验 · 1 个 Windows 公测版</strong>
         </div>
 
         {visibleProjects.length > 0 ? (
-          <div className="projectGrid">
-            {visibleProjects.map((project, index) => {
-              const isCompleted = completed.includes(project.id);
+          <div className="projectSections">
+            {projectGroups.map((group, groupIndex) => {
+              const groupedProjects = visibleProjects.filter((project) => project.group === group.name);
+              if (groupedProjects.length === 0) return null;
               return (
-                <article
-                  className={`projectCard ${isCompleted ? "completed" : ""}`}
-                  key={project.id}
-                  style={{ "--accent": project.accent } as React.CSSProperties}
-                >
-                  <div className="cardTopline">
-                    <span className="cardIndex">
-                      {String(projects.indexOf(project) + 1).padStart(2, "0")}
-                    </span>
-                    <span className="category">{project.category}</span>
-                    <span className={`status ${project.status === "推进中" ? "ongoing" : "queued"}`}>
-                      {project.status}
-                    </span>
-                  </div>
+                <section className="projectSection" id={group.id} key={group.id}>
+                  <header className="projectSectionHead">
+                    <div><span>0{groupIndex + 1}</span><h3>{group.name}</h3></div>
+                    <p>{group.description}</p>
+                  </header>
+                  <div className={`projectGrid ${group.name === "硬件" ? "single" : ""}`}>
+                    {groupedProjects.map((project, index) => {
+                      const isCompleted = completed.includes(project.id);
+                      return (
+                        <article
+                          className={`projectCard ${isCompleted ? "completed" : ""}`}
+                          key={project.id}
+                          style={{ "--accent": project.accent } as React.CSSProperties}
+                        >
+                          <div className="cardTopline">
+                            <span className="cardIndex">{String(index + 1).padStart(2, "0")}</span>
+                            <span className="category">{project.category}</span>
+                            <span className={`status ${project.status === "推进中" ? "ongoing" : "queued"}`}>
+                              {project.status}
+                            </span>
+                          </div>
 
-                  <div className="titleRow">
-                    <div>
-                      <h3>{project.name}</h3>
-                      {project.alias && <p className="alias">{project.alias}</p>}
-                    </div>
-                    <button
-                      type="button"
-                      className="completeButton"
-                      onClick={() => toggleCompleted(project.id)}
-                      aria-label={`${isCompleted ? "取消完成" : "标记完成"}：${project.name}`}
-                      aria-pressed={isCompleted}
-                    >
-                      <span aria-hidden="true">{isCompleted ? "✓" : ""}</span>
-                    </button>
-                  </div>
+                          <div className="titleRow">
+                            <div>
+                              <h3>{project.name}</h3>
+                              {project.alias && <p className="alias">{project.alias}</p>}
+                            </div>
+                            <button
+                              type="button"
+                              className="completeButton"
+                              onClick={() => toggleCompleted(project.id)}
+                              aria-label={`${isCompleted ? "取消完成" : "标记完成"}：${project.name}`}
+                              aria-pressed={isCompleted}
+                            >
+                              <span aria-hidden="true">{isCompleted ? "✓" : ""}</span>
+                            </button>
+                          </div>
 
-                  <p className="direction">{project.direction}</p>
+                          <p className="direction">{project.direction}</p>
 
-                  <div className="detailBlock">
-                    <span>目前</span>
-                    <p>{project.context}</p>
-                  </div>
+                          <div className="detailBlock">
+                            <span>目前</span>
+                            <p>{project.context}</p>
+                          </div>
 
-                  <div className="nextStep">
-                    <span className="nextArrow" aria-hidden="true">↗</span>
-                    <div>
-                      <span>下一步</span>
-                      <p>{project.next}</p>
-                    </div>
+                          <div className="nextStep">
+                            <span className="nextArrow" aria-hidden="true">↗</span>
+                            <div>
+                              <span>下一步</span>
+                              <p>{project.next}</p>
+                            </div>
+                          </div>
+                          {(project.publicUrl || project.repoUrl) && (
+                            <div className="projectActions">
+                              {project.publicUrl && (
+                                <a
+                                  className={`projectLink ${project.publicKind === "download" ? "download" : ""}`}
+                                  href={project.publicUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <span>{project.publicKind === "download" ? "公开测试" : "已上线"}</span>
+                                  {project.publicLabel} ↗
+                                </a>
+                              )}
+                              {project.repoUrl && (
+                                <a className="repoLink" href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                                  GitHub ↗
+                                </a>
+                              )}
+                            </div>
+                          )}
+                        </article>
+                      );
+                    })}
                   </div>
-                  {project.publicUrl && (
-                    <a
-                      className={`projectLink ${project.publicKind === "download" ? "download" : ""}`}
-                      href={project.publicUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>{project.publicKind === "download" ? "公开测试" : "已上线"}</span>
-                      {project.publicLabel} ↗
-                    </a>
-                  )}
-                </article>
+                </section>
               );
             })}
           </div>

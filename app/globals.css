@@ -322,6 +322,51 @@ main {
   box-shadow: 0 1px 4px rgba(31, 36, 31, 0.08);
 }
 
+.groupNav {
+  margin: 28px 0 8px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.groupNav a {
+  min-height: 92px;
+  padding: 15px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  gap: 2px 12px;
+  color: var(--ink);
+  background: rgba(120, 146, 124, 0.08);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.groupNav a:hover {
+  transform: translateY(-1px);
+  border-color: var(--sage);
+}
+
+.groupNav strong {
+  grid-row: 1 / 3;
+  align-self: center;
+  color: var(--sage-dark);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.groupNav span {
+  align-self: end;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.groupNav small {
+  color: var(--muted);
+}
+
 .resultLine {
   margin: 22px 0 12px;
   display: flex;
@@ -341,6 +386,53 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.projectSections {
+  display: grid;
+  gap: 54px;
+}
+
+.projectSection {
+  scroll-margin-top: 24px;
+}
+
+.projectSectionHead {
+  margin-bottom: 15px;
+  padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.projectSectionHead > div {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.projectSectionHead span {
+  color: var(--sage-dark);
+  font-family: Georgia, serif;
+}
+
+.projectSectionHead h3 {
+  margin: 0;
+  font-family: "Songti SC", serif;
+  font-size: 28px;
+}
+
+.projectSectionHead p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.projectGrid.single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: calc(50% - 9px);
 }
 
 .projectCard {
@@ -549,6 +641,25 @@ main {
 
 .projectLink.download {
   background: #4c527d;
+}
+
+.projectActions {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.projectActions .projectLink {
+  margin-top: 0;
+}
+
+.repoLink {
+  color: var(--sage-dark);
+  font-size: 12px;
+  font-weight: 800;
+  text-underline-offset: 3px;
 }
 
 .emptyState {
@@ -776,6 +887,10 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  .projectGrid.single {
+    max-width: none;
+  }
+
   .connectIntro {
     grid-template-columns: 1fr;
     align-items: start;
@@ -807,6 +922,20 @@ footer a {
     min-height: auto;
     padding: 54px 0 48px;
     gap: 42px;
+  }
+
+  .groupNav {
+    grid-template-columns: 1fr;
+  }
+
+  .groupNav a {
+    min-height: 76px;
+  }
+
+  .projectSectionHead {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .hero h1 {
