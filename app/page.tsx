@@ -17,6 +17,9 @@ type Project = {
   publicLabel?: string;
   publicKind?: "online" | "download";
   repoUrl?: string;
+  details?: Array<{ label: string; text: string }>;
+  existingImages?: Array<{ src: string; alt: string }>;
+  existingMediaCaption?: string;
 };
 
 const projects: Project[] = [
@@ -46,6 +49,11 @@ const projects: Project[] = [
     context: "正在规划技术路线、项目结构与完整视觉语言。",
     next: "确定核心合成循环，制作首个可玩原型。",
     accent: "#e5a52f",
+    details: [
+      { label: "核心体验", text: "收集水果、合成升级、解锁新品，再把收益投入店面陈列和装饰。" },
+      { label: "已有内容", text: "已确定复古水果海报的视觉方向，正在规划技术路线和项目结构。" },
+      { label: "验证重点", text: "首个原型要先证明合成节奏有趣，而不是一次性铺开大量水果和装修系统。" },
+    ],
   },
   {
     id: "poet-online",
@@ -58,6 +66,11 @@ const projects: Project[] = [
     context: "正在构思稳定的表达形式，并创作第一批示例内容。",
     next: "确定内容模板，产出一组完整样例测试传播效果。",
     accent: "#7567c8",
+    details: [
+      { label: "核心体验", text: "从一个网络热梗出发，匹配古诗的情绪与语境，再完成一版既好笑又保留原意的改写。" },
+      { label: "已有内容", text: "已经确定“热梗—情绪匹配—古诗改写—分享卡片”的内容链路。" },
+      { label: "验证重点", text: "第一批样例需要同时测试可读性、笑点和分享意愿。" },
+    ],
   },
   {
     id: "shandong-dinner",
@@ -71,6 +84,17 @@ const projects: Project[] = [
     next: "开放访客访问权限，并完成一轮公开体验验收。",
     accent: "#c14e4e",
     repoUrl: "https://github.com/silver-lynn/xiaomao-laichixi",
+    existingImages: [
+      { src: "/project-images/xiaomao-og.png", alt: "小猫来吃席项目已有封面" },
+      { src: "/project-images/xiaomao-characters.png", alt: "小猫来吃席已有角色群像" },
+      { src: "/project-images/xiaomao-banquet-room.png", alt: "小猫来吃席已有宴席场景" },
+    ],
+    existingMediaCaption: "项目仓库已有素材：正式封面、角色群像与宴席场景。",
+    details: [
+      { label: "核心体验", text: "在一场完整宴席中，通过观察、拖动、倾斜和节奏选择练习常见礼数。" },
+      { label: "已有内容", text: "座次、鱼头、倒茶、敬酒、动作节奏、咕噜语音和宴席纪念册均已实现。" },
+      { label: "当前限制", text: "互动版本已经完成，但当前公开地址需要授权，访客暂时无法直接进入。" },
+    ],
   },
   {
     id: "glass-art",
@@ -99,6 +123,11 @@ const projects: Project[] = [
     context: "整体技术方案已经完成第一轮梳理。",
     next: "缩小 MVP 范围，优先验证动作捕捉、投影校准与服装跟随。",
     accent: "#5682b9",
+    details: [
+      { label: "体验路径", text: "用户站入投影区域，系统捕捉姿态，让数字服装随身体移动并切换场景。" },
+      { label: "已有内容", text: "已完成第一轮技术方案梳理，明确动作捕捉、服装跟随、投影和场景四个模块。" },
+      { label: "验证重点", text: "优先测试延迟、身体遮挡和投影对齐，不先追求完整服装库。" },
+    ],
   },
   {
     id: "strong-woman",
@@ -110,6 +139,11 @@ const projects: Project[] = [
     context: "已完成玩法方向和主题气质的初步策划。",
     next: "确定换装部位、武器系统和首批角色素材清单。",
     accent: "#d45582",
+    details: [
+      { label: "核心体验", text: "选择角色、替换服装部位与武器，让造型气质和战斗装备形成鲜明反差。" },
+      { label: "已有内容", text: "已确定女性换装、枪炮系统与“大女人”表达的组合方向。" },
+      { label: "验证重点", text: "先验证单角色换装手感与武器搭配乐趣，再扩展角色和素材数量。" },
+    ],
   },
   {
     id: "love-letters",
@@ -121,6 +155,11 @@ const projects: Project[] = [
     context: "正在规划内容范围、人物关系和资料结构。",
     next: "选 3–5 位人物做内容样板，并明确史料引用标准。",
     accent: "#a55d67",
+    details: [
+      { label: "核心结构", text: "用人物、情书、时间线与关系网络串起恋爱史，让读者既能顺读故事，也能沿资料追溯。" },
+      { label: "已有内容", text: "已经确定名人关系、情书原文和事件时间线三类核心资料。" },
+      { label: "验证重点", text: "样板人物需要证明史料出处清楚，同时保持阅读节奏和人物张力。" },
+    ],
   },
   {
     id: "four-directions",
@@ -132,6 +171,11 @@ const projects: Project[] = [
     context: "已形成初步内容架构与路线交互构想。",
     next: "选一位旅行家完成“人物—路线—事件”样板页。",
     accent: "#3f8065",
+    details: [
+      { label: "核心结构", text: "从东南西北四个方向进入，选择旅行家，沿路线查看地点、事件和文本片段。" },
+      { label: "已有内容", text: "已形成方向、人物、路线、地点与事件之间的初步内容架构。" },
+      { label: "验证重点", text: "地图不只展示轨迹，还要让每一次移动都能推进人物故事。" },
+    ],
   },
   {
     id: "mindful-scrolling",
@@ -160,6 +204,11 @@ const projects: Project[] = [
     context: "正在梳理故事设定、科举流程与玩法细节。",
     next: "完成一条从报名到首场考试的可玩剧情线。",
     accent: "#9a703e",
+    details: [
+      { label: "核心体验", text: "从报名、备考到应试，在资源、身份和事件选择中承担不同结果。" },
+      { label: "已有内容", text: "正在梳理时代设定、科举流程、困难机制与分支叙事的基本关系。" },
+      { label: "验证重点", text: "首条剧情必须既能解释科举流程，又保留角色命运和选择压力。" },
+    ],
   },
   {
     id: "feather-letter",
@@ -433,6 +482,28 @@ export default function Home() {
                           </div>
 
                           <p className="direction">{project.direction}</p>
+
+                          {project.existingImages && (
+                            <figure className="existingMedia">
+                              <div>
+                                {project.existingImages.map((image) => (
+                                  <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
+                                ))}
+                              </div>
+                              {project.existingMediaCaption && <figcaption>{project.existingMediaCaption}</figcaption>}
+                            </figure>
+                          )}
+
+                          {project.details && (
+                            <div className="projectDetails">
+                              {project.details.map((detail) => (
+                                <div key={detail.label}>
+                                  <span>{detail.label}</span>
+                                  <p>{detail.text}</p>
+                                </div>
+                              ))}
+                            </div>
+                          )}
 
                           <div className="detailBlock">
                             <span>目前</span>

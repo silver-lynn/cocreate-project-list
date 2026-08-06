@@ -561,6 +561,71 @@ main {
   line-height: 1.85;
 }
 
+.existingMedia {
+  margin: 0 0 22px;
+}
+
+.existingMedia > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.existingMedia img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.existingMedia img:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 8.5;
+}
+
+.existingMedia figcaption {
+  margin-top: 8px;
+  color: #888a83;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.projectDetails {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.projectDetails > div {
+  padding: 14px 13px 15px 0;
+}
+
+.projectDetails > div + div {
+  padding-left: 13px;
+  border-left: 1px solid var(--line);
+}
+
+.projectDetails span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+}
+
+.projectDetails p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
 .detailBlock {
   padding: 17px 0 18px;
   display: grid;
@@ -930,6 +995,20 @@ footer a {
 
   .groupNav a {
     min-height: 76px;
+  }
+
+  .projectDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .projectDetails > div,
+  .projectDetails > div + div {
+    padding: 13px 0;
+    border-left: 0;
+  }
+
+  .projectDetails > div + div {
+    border-top: 1px solid var(--line);
   }
 
   .projectSectionHead {
