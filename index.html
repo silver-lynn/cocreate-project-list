@@ -26,41 +26,16 @@
 <div id="project-hub-inline">
   <header class="project-hub-hero">
     <div class="project-hub-hero-copy">
-      <p class="project-hub-kicker">LEONA'S CREATIVE ATLAS · 2026</p>
+      <p class="project-hub-kicker">LEONA'S CURRENT PROJECTS · 2026</p>
       <div class="project-hub-title-row">
         <span class="project-hub-compass" aria-hidden="true">✦</span>
-        <h1>共创项目簿</h1>
+        <h1><span class="project-hub-owner">Leona的</span><span>共创项目簿</span></h1>
       </div>
-      <p class="project-hub-subtitle">一份持续生长的创造地图，记录想法、实验与协作的轨迹。</p>
+      <p class="project-hub-subtitle">一份持续生长的项目记录，收纳想法、实验与协作的进展。</p>
       <div class="project-hub-count" aria-label="项目数量">
         <strong>15</strong>
         <span>个正在发生的项目</span>
       </div>
-      <p class="project-hub-route-note">从一座岛、一片旷野或一间工坊出发，沿着坐标进入每个项目。</p>
-    </div>
-
-    <div class="project-hub-atlas" aria-label="项目分类地图">
-      <svg class="project-hub-atlas-art" viewBox="0 0 1000 460" role="img" aria-label="网页、游戏与硬件三块创作区域">
-        <path class="atlas-shore atlas-shore-web" d="M45 155C85 73 205 40 327 85c70 26 113 86 94 151-17 60-85 97-164 102-87 6-192-18-220-81-14-32-9-67 8-102Z"/>
-        <path class="atlas-shore atlas-shore-game" d="M369 110c66-69 205-84 319-26 91 46 119 138 76 213-38 66-136 92-229 75-91-16-169-72-181-142-7-43-1-83 15-120Z"/>
-        <path class="atlas-shore atlas-shore-hardware" d="M752 135c48-48 139-42 192 10 43 43 44 117 7 168-32 43-105 64-161 36-58-29-80-93-62-148 6-23 14-46 24-66Z"/>
-        <path class="atlas-route atlas-route-blue" d="M157 243C292 151 380 302 501 209S694 137 824 249"/>
-        <path class="atlas-route atlas-route-green" d="M276 126c99 46 146 119 237 146 85 25 165 5 239-39"/>
-        <circle class="atlas-point atlas-point-blue" cx="157" cy="243" r="13"/><circle class="atlas-point atlas-point-blue" cx="327" cy="211" r="10"/>
-        <circle class="atlas-point atlas-point-green" cx="501" cy="209" r="13"/><circle class="atlas-point atlas-point-green" cx="658" cy="211" r="10"/>
-        <circle class="atlas-point atlas-point-red" cx="824" cy="249" r="13"/>
-        <path class="atlas-wave" d="M79 378c28-22 55-22 83 0s55 22 83 0 55-22 83 0"/>
-        <path class="atlas-mountain" d="m480 108 38-49 30 35 34-50 50 64"/>
-        <path class="atlas-workshop" d="M834 112v-37h44v37m-58 28h73v62h-73zm14 0v-24h45v24"/>
-      </svg>
-
-      <nav class="project-hub-section-nav" aria-label="项目分区导航">
-        <a class="atlas-region atlas-region-web" href="#web-projects"><span>网页群岛</span><strong>07</strong><small>羽毛信 · 情书野史 · 四方求索</small><em>进入分区 →</em></a>
-        <a class="atlas-region atlas-region-game" href="#game-projects"><span>游戏旷野</span><strong>07</strong><small>猴击俱乐部 · 小猫来吃席 · KAREN</small><em>进入分区 →</em></a>
-        <a class="atlas-region atlas-region-hardware" href="#hardware-projects"><span>硬件工坊</span><strong>01</strong><small>Try It On</small><em>进入分区 →</em></a>
-      </nav>
-      <span class="atlas-coordinate atlas-coordinate-a">N 37° · WEB</span>
-      <span class="atlas-coordinate atlas-coordinate-b">E 120° · PLAY</span>
     </div>
   </header>
 
@@ -440,15 +415,13 @@
     font-family: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
   }
   #project-hub-inline .project-hub-hero {
-    min-height: 650px;
-    display: grid;
-    grid-template-columns: minmax(330px, .44fr) minmax(600px, 1fr);
+    min-height: 380px;
+    display: flex;
     align-items: center;
-    gap: 32px;
-    padding: 44px 0 34px;
+    padding: 52px 0 44px;
     border-bottom: 1px solid rgba(34, 68, 70, .24);
   }
-  #project-hub-inline .project-hub-hero-copy { position: relative; z-index: 2; padding: 12px 0 28px; }
+  #project-hub-inline .project-hub-hero-copy { position: relative; z-index: 2; width: min(760px, 100%); padding: 12px 0 28px; }
   #project-hub-inline .project-hub-kicker {
     margin: 0 0 25px;
     color: #9f4b2e;
@@ -466,7 +439,16 @@
     line-height: .98;
     letter-spacing: -.055em;
     font-weight: 700;
-    white-space: nowrap;
+    white-space: normal;
+  }
+  #project-hub-inline .project-hub-title-row h1 > span { display: block; }
+  #project-hub-inline .project-hub-title-row .project-hub-owner {
+    margin-bottom: 9px;
+    color: #9f4b2e;
+    font-family: Georgia, "Songti SC", serif;
+    font-size: .48em;
+    line-height: 1;
+    letter-spacing: .035em;
   }
   #project-hub-inline .project-hub-compass {
     width: 40px;
@@ -651,20 +633,13 @@
 
   @media (max-width: 1040px) {
     #project-hub-inline { padding-inline: 28px; }
-    #project-hub-inline .project-hub-hero { grid-template-columns: 1fr; }
-    #project-hub-inline .project-hub-hero-copy { display: grid; grid-template-columns: 1fr auto; gap: 0 24px; align-items: end; }
-    #project-hub-inline .project-hub-title-row,
-    #project-hub-inline .project-hub-subtitle,
-    #project-hub-inline .project-hub-route-note { grid-column: 1; }
-    #project-hub-inline .project-hub-count { grid-column: 2; grid-row: 2 / 5; }
-    #project-hub-inline .project-hub-atlas { width: 100%; }
     #project-hub-inline .project-hub-connect { margin-inline: -28px; padding-inline: 28px; }
   }
 
   @media (max-width: 680px) {
     body { background: #f4ecd8; }
     #project-hub-inline { padding: 0 18px 28px; }
-    #project-hub-inline .project-hub-hero { min-height: auto; padding: 34px 0 24px; gap: 18px; }
+    #project-hub-inline .project-hub-hero { min-height: auto; padding: 34px 0 30px; }
     #project-hub-inline .project-hub-hero-copy { display: block; padding-bottom: 0; }
     #project-hub-inline .project-hub-kicker { margin-bottom: 18px; }
     #project-hub-inline .project-hub-title-row { gap: 10px; }
