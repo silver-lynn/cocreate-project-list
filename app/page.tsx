@@ -221,7 +221,7 @@ const projects: Project[] = [
     context: "候鸟迁徙月历原型已上线，包含 20 种候鸟与 240 个“物种 × 月份”数据切片。",
     next: "继续完善逐物种数据溯源与不确定性说明，升级核心地图视觉。",
     accent: "#548ba3",
-    publicUrl: "https://silver-lynn.github.io/feather-letter/",
+    publicUrl: "https://silver-lynn.github.io/feather-letter/maps.html",
     publicLabel: "立即体验",
     publicKind: "online",
     repoUrl: "https://github.com/silver-lynn/feather-letter",
