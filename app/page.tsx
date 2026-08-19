@@ -273,6 +273,22 @@ const projects: Project[] = [
     publicKind: "online",
     repoUrl: "https://github.com/silver-lynn/today-first-order",
   },
+  {
+    id: "swimming-milestones",
+    name: "游泳里程碑",
+    alias: "自学游泳关卡手册",
+    status: "推进中",
+    group: "网页",
+    category: "学习手册",
+    direction: "面向游泳自学者的 21 关免费学习手册，覆盖水性、蛙泳与自由泳。",
+    context: "完整学习手册已公开上线，可按关卡逐步练习并记录进度。",
+    next: "继续补充动作要点、练习反馈与关卡进度记录体验。",
+    accent: "#277f92",
+    publicUrl: "https://yongye-swim-handbook.crafty-lynx-0539.chatgpt.site",
+    publicLabel: "打开手册",
+    publicKind: "online",
+    repoUrl: "https://github.com/silver-lynn/swimming-milestones",
+  },
 ];
 
 const projectGroups = [
@@ -344,7 +360,7 @@ export default function Home() {
           <span className="brandMark">共</span>
           <span>共创项目簿</span>
         </a>
-        <div className="dateStamp">更新于 2026.08.07</div>
+        <div className="dateStamp">更新于 2026.08.19</div>
       </header>
 
       <section className="hero" id="top">
@@ -434,7 +450,7 @@ export default function Home() {
 
         <div className="resultLine" aria-live="polite">
           <span>显示 {visibleProjects.length} 个项目</span>
-          <strong>7 个公开入口已验证 · 6 个在线体验 · 1 个 Windows 公测版</strong>
+          <strong>8 个公开入口已验证 · 7 个在线体验 · 1 个 Windows 公测版</strong>
         </div>
 
         {visibleProjects.length > 0 ? (
@@ -604,19 +620,19 @@ export default function Home() {
             </div>
             <a
               className="qrImageLink"
-              href="/qrcode-monkey-club.jpg"
+              href="/qrcode-monkey-club-2026-08-26.png"
               target="_blank"
               rel="noreferrer"
               aria-label="查看猴击俱乐部吼叫群二维码原图"
             >
               <img
-                src="/qrcode-monkey-club.jpg"
+                src="/qrcode-monkey-club-2026-08-26.png"
                 alt="猴击俱乐部吼叫群二维码"
                 loading="lazy"
                 decoding="async"
               />
             </a>
-            <p className="qrHint">群二维码有效期至 2026.08.13</p>
+            <p className="qrHint">群二维码有效期至 2026.08.26</p>
           </article>
 
           <article className="qrCard cocreateQrCard">
@@ -629,19 +645,19 @@ export default function Home() {
             </div>
             <a
               className="qrImageLink"
-              href="/qrcode-cocreate.jpg"
+              href="/qrcode-cocreate-2026-08-26.png"
               target="_blank"
               rel="noreferrer"
               aria-label="查看共创群聊项目二维码原图"
             >
               <img
-                src="/qrcode-cocreate.jpg"
+                src="/qrcode-cocreate-2026-08-26.png"
                 alt="Leona 的创作者朋友群聊二维码"
                 loading="lazy"
                 decoding="async"
               />
             </a>
-            <p className="qrHint">群二维码有效期至 2026.08.13</p>
+            <p className="qrHint">群二维码有效期至 2026.08.26</p>
           </article>
         </div>
 
